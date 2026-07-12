@@ -1,44 +1,52 @@
-# Assignmate
+# 📚 Assignmate
 
-A powerful, all-in-one Python application designed to assist students and professionals in managing, tracking, and generating assignments or reports.
+> **The Peer-to-Peer Student Tutoring Marketplace.**
 
-## 🌟 The Problem Solved
+Assignmate is a platform designed to connect students with verified peer tutors for academic help. Built with trust in mind, it features an escrow payment system to ensure fair compensation and quality work.
 
-Keeping track of multiple assignments, deadlines, and project requirements can be overwhelming. "Assignmate" streamlines this process into a single, cohesive application (housed entirely in `app.py`), reducing administrative overhead and helping you focus on the actual work.
+This project strongly aligns with **SDG 4 (Quality Education)** by promoting inclusive and equitable learning opportunities for students helping students.
 
-## 🛠️ Tech Stack
+*Built by Team DETONATORS V4.*
 
-- **Language**: Python 3
-- **Core Script**: `app.py` (A comprehensive ~65KB monolithic application handling all logic)
-- **Frameworks**: (Assuming standard Python UI/Web frameworks like Tkinter, PyQt, Flask, or Streamlit based on typical monolithic structures)
+## 🚀 What It Does
 
-## ✨ Features
+Assignmate provides a complete workflow for academic gig work:
+- **Clients (Students)** can post tasks, set a bounty, and hire freelancers.
+- **Freelancers (Tutors)** can browse tasks, complete assignments, and earn money.
+- **The Escrow System** securely holds the bounty until both parties are satisfied.
 
-- **Centralized Management**: All logic and data handling is consolidated into a single, robust `app.py` file for ease of portability.
-- **Task Tracking**: Monitor the status of various assignments and tasks.
-- **Automated Assistance**: Designed to act as your "mate" in processing assignment data or generating templates.
+### 🌟 Features
+- **Role-Based Authentication:** Secure USN-based login for Clients, Freelancers, and Admins.
+- **Task & Bounty Management:** Full CRUD operations for academic gigs.
+- **Escrow Wallet:** Built-in financial system to handle transactions safely.
+- **Reputation System:** Five-star rating engine to build trust across the marketplace.
+- **Admin Dashboard:** Centralized control for user verification and platform moderation.
 
-## 🚦 Setup Instructions
+## 🛠 Tech Stack
 
-To run Assignmate locally:
+Assignmate is a monolithic web application built on a rock-solid Python stack:
+- **Backend:** Python, Flask, Werkzeug
+- **Database:** SQLite (with custom row factories for seamless data access)
+- **Frontend Templates:** HTML, CSS, Jinja2
 
-1. Clone the repository:
+## 💻 Getting Started Locally
+
+1. **Clone the repo:**
    ```bash
    git clone https://github.com/ItzSaurav/Assignmate-.git
-   ```
-2. Navigate to the project directory:
-   ```bash
    cd Assignmate-
    ```
-3. Install any required dependencies (if applicable, typically via `pip` based on the imports in `app.py`).
-4. Run the application:
+
+2. **Install the dependencies:**
+   ```bash
+   pip install flask werkzeug
+   ```
+
+3. **Start the server:**
    ```bash
    python app.py
    ```
-
-## 📸 Screenshots
-
-*(Add screenshots of the Assignmate interface here)*
+   *The database will auto-initialize on the first run. Check out the terminal output for the local port (usually `http://127.0.0.1:5000`).*
 
 ---
-*Built with ❤️ by [Saurav](https://github.com/ItzSaurav)*
+*Built by [Saurav](https://github.com/ItzSaurav) and Team DETONATORS V4.*
