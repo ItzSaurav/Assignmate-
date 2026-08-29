@@ -1,52 +1,51 @@
-# 📚 Assignmate
+# Assignmate
 
-> **The Peer-to-Peer Student Tutoring Marketplace.**
+A peer-to-peer student tutoring platform prototype built with Flask and SQLite. Implements role-based authentication, gig task management, and an internal database-simulated escrow ledger.
 
-Assignmate is a platform designed to connect students with verified peer tutors for academic help. Built with trust in mind, it features an escrow payment system to ensure fair compensation and quality work.
+> Built as an academic course project by Team DETONATORS V4 at GCEM (VTU).
 
-This project strongly aligns with **SDG 4 (Quality Education)** by promoting inclusive and equitable learning opportunities for students helping students.
+## Project Overview
 
-*Built by Team DETONATORS V4.*
+Assignmate was created as a course project exploring web development, relational database modeling, and user access control. The platform connects students seeking academic assistance with peer tutors.
 
-## 🚀 What It Does
+## Key Features
 
-Assignmate provides a complete workflow for academic gig work:
-- **Clients (Students)** can post tasks, set a bounty, and hire freelancers.
-- **Freelancers (Tutors)** can browse tasks, complete assignments, and earn money.
-- **The Escrow System** securely holds the bounty until both parties are satisfied.
+- **Role-Based Access Control**: Separate permissions and views for Students, Tutors, and Administrators.
+- **Task Postings**: Create, browse, bid on, and complete academic tutoring tasks.
+- **Simulated Escrow Ledger**: Internal database ledger that reserves user balance upon task assignment and credits the tutor upon completion approval.
+- **User Reputation**: Task rating and review storage within SQLite.
 
-### 🌟 Features
-- **Role-Based Authentication:** Secure USN-based login for Clients, Freelancers, and Admins.
-- **Task & Bounty Management:** Full CRUD operations for academic gigs.
-- **Escrow Wallet:** Built-in financial system to handle transactions safely.
-- **Reputation System:** Five-star rating engine to build trust across the marketplace.
-- **Admin Dashboard:** Centralized control for user verification and platform moderation.
+## Tech Stack
 
-## 🛠 Tech Stack
+- **Backend**: Python 3, Flask
+- **Database**: SQLite3
+- **Frontend**: HTML5, CSS3, Jinja2 Templates
+- **Authentication**: Werkzeug password hashing, session cookies
 
-Assignmate is a monolithic web application built on a rock-solid Python stack:
-- **Backend:** Python, Flask, Werkzeug
-- **Database:** SQLite (with custom row factories for seamless data access)
-- **Frontend Templates:** HTML, CSS, Jinja2
+## Local Setup
 
-## 💻 Getting Started Locally
-
-1. **Clone the repo:**
+1. Clone the repository:
    ```bash
    git clone https://github.com/ItzSaurav/Assignmate-.git
    cd Assignmate-
    ```
 
-2. **Install the dependencies:**
+2. Install dependencies:
    ```bash
    pip install flask werkzeug
    ```
 
-3. **Start the server:**
+3. Run the application:
    ```bash
    python app.py
    ```
-   *The database will auto-initialize on the first run. Check out the terminal output for the local port (usually `http://127.0.0.1:5000`).*
 
----
-*Built by [Saurav](https://github.com/ItzSaurav) and Team DETONATORS V4.*
+4. Navigate to `http://localhost:5000` in your web browser.
+
+## Academic Disclaimer
+
+This project is an educational prototype developed for academic coursework. The escrow mechanism is a simulated database transaction model, not an integrated real-money financial gateway.
+
+## License
+
+MIT License.
