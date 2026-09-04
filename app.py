@@ -19,15 +19,19 @@ app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 
 # --- DATABASE SETUP ---
+# Store all user accounts, task bounties, and escrow transactions in a local SQLite file
 DATABASE = 'assignmate.db'
 
 def get_db():
-    """Get database connection with row factory for dict-like access"""
+    # Helper to grab a sqlite connection. row_factory = sqlite3.Row lets us access columns
+    # like dict keys (row['title']) which makes templating much easier to read
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     return conn
 
 def init_db():
+    # Creates tables if this is the first time running the project
+
     with get_db() as conn:
         conn.execute('''
             CREATE TABLE IF NOT EXISTS users (
